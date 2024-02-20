@@ -1,0 +1,130 @@
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Impostazioni corpo del documento */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 10vh;
+}
+
+/* Contenitore per logo e slogan */
+.container {
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 8px;
+    width: 80%;
+    max-width: 1200px;
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+}
+
+/* Stilizzazione del logo */
+.logo {
+    height: 100px; 
+    margin: 20px 200px;
+}
+
+/* Stilizzazione dello slogan */
+.slogan {
+    color: rgb(112, 255, 112); 
+    font-size: 2rem;
+    background-color: transparent;
+    margin: 20px 80px;
+}
+
+/* Stilizzazione della barra di navigazione */
+.navigation {
+    background-color: lime; 
+    width: 100%; 
+    padding: 10px 0;
+    margin-top: 20px; 
+    display: flex;
+    justify-content: center;
+}
+
+/* Stilizzazione dei pulsanti */
+.nav-button {
+    background-color: white;
+    color: black;
+    border: 1px solid grey;
+    padding: 10px 20px;
+    margin: 0 5px; 
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold; 
+}
+
+/* Stilizzazione della sezione degli scooter */
+.scooters {
+    width: 100%; 
+    margin-top: 20px; 
+    
+}
+
+/* Stilizzazione di ogni singolo scooter */
+.scooter {
+    margin-bottom: 10px;
+    padding-left: 30px; 
+    position: relative;
+}
+
+/* Cerchio bianco prima di ogni scooter */
+.scooter:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%; 
+    border: 2px solid black; 
+}
+
+/* Stilizzazione del contenitore della barra di stato della batteria */
+.battery-status {
+    position: relative;
+    height: 20px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Stilizzazione della barra del livello della batteria */
+.battery-level {
+height: 100%;
+position: absolute;
+left: 0;
+top: 0;
+border-radius: 5px;
+}
+
+/* Colori del livello della batteria */
+.orange .battery-level { background-color: orange; }
+.green .battery-level { background-color: green; }
+.red .battery-level { background-color: red; }
+
+
+.battery-status::before {
+padding: 2px 5px;
+border-radius: 5px;
+color: black; 
+font-weight: bold;
+}
